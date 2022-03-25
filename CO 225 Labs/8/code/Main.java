@@ -21,10 +21,45 @@ class Main {
     }
     
 
+	static int result[][] = new int[a.length][b[0].length];
+
     public static void main(String [] args) { 
 
-	int [][] x = Matrix.multiply(a, b); 
-	print_matrix(x); // see if the multipication is correct 	
+	//int [][] x = Matrix.multiply(a, b);
+	int rowCount;
+	int colCount;
+	int count = 0;
+	
+	Thread [] t = new Thread[b.length];
+
+	//use differend thread for each row operation
+	for(rowCount = 0 ; rowCount < a.length; rowCount++)
+                   {
+                        for (colCount = 0 ; colCount < b[0].length; colCount++ )
+                        {
+                                // creating thread for multiplications
+                            t[count] = new Thread(new Matrix( a, b, result));
+                            t[count].start(); //thread start 
+                            count++;
+                        }
+
+	// joining threads
+	for(int i=0; i<count; i++)
+	{  
+        try{
+		
+			thre[i].join();
+	
+		}catch (InterruptedException e){
+	
+		//thread was interrupted
+	
+		}
+	
+	}
+                        
+                   }
+	print_matrix(result); // see if the multipication is correct 	
 
     }
 }

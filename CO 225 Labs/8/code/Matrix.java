@@ -6,10 +6,13 @@ public class Matrix extends Thread {
 
     /* You might need other variables as well */
 
-    public Matrix() { // need to change this, might need some information 
-    }
+    public Matrix(int mat1[][], int mat2[][], int mat3[][]) { // need to change this, might need some information 
+		this.a = mat1;
+		this.b = mat2;
+		this.c = mat3;
+	}
 
-    public static int [][] multiply(int [][] a, int [][] b) {
+    public synchronized static int [][] multiply(int [][] a, int [][] b) {
 
 	/* check if multipication can be done, if not 
 	 * return null 
@@ -40,5 +43,10 @@ public class Matrix extends Thread {
 
 	return c; 
     }
+
+	@Override
+	public void run(){
+		c=multiply(a,b);
+	}
 
 }

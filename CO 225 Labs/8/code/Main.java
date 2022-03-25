@@ -48,7 +48,7 @@ class Main {
 	{  
         try{
 		
-			thre[i].join();
+			t[i].join();
 	
 		}catch (InterruptedException e){
 	
@@ -63,3 +63,5 @@ class Main {
 
     }
 }
+
+

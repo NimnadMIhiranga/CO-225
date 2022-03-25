@@ -1,3 +1,10 @@
+/*
+	E/18/180
+	Kodituwakku M.K.N.M.
+	Lab 08 : Java Concurrency (Threads)
+
+*/
+
 public class Matrix extends Thread { 
 
     private static int [][] a; 

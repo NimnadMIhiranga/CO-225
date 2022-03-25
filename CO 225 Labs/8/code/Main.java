@@ -1,3 +1,11 @@
+/*
+	E/18/180
+	Kodituwakku M.K.N.M.
+	Lab 08 : Java Concurrency (Threads)
+
+*/
+
+
 class Main { 
     public static int [][] a =
 		{		{1, 1, 1},

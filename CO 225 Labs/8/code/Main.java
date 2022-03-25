@@ -51,7 +51,7 @@ class Main {
 			t[i].join();
 	
 		}catch (InterruptedException e){
-	
+				System.out.println("Thread was interrupted");
 		//thread was interrupted
 	
 		}

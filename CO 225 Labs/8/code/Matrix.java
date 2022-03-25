@@ -31,7 +31,7 @@ public class Matrix extends Thread {
 	    return null;
 	}
 
-	int [][] c = new int [x][y]; 
+//	int [][] c = new int [x][y]; 
 	int i, j, k, s; 
 
 	for(i=0; i<x; i++) 
@@ -46,7 +46,7 @@ public class Matrix extends Thread {
 
 	@Override
 	public void run(){
-		c=multiply(a,b);
+		c=multiply(this.a,this.b);
 	}
 
 }
